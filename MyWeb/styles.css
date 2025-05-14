@@ -1,0 +1,239 @@
+/* Reset default margins and padding for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the body element with high specificity */
+html body {
+  /* Creates a smooth gradient background from dark gray to a slightly lighter shade */
+  /* background: linear-gradient(135deg, #1a202c, #2d3748) !important; */
+  /* Fallback solid background color in case the gradient fails */
+  background-color: rgb(5, 5, 5) !important;
+  /* Ensures the body takes at least the full viewport height */
+  min-height: 100vh !important;
+  /* Sets default text color to white for contrast */
+  color: white !important;
+  /* Uses Poppins font with fallbacks */
+  font-family: "Poppins", Arial, sans-serif !important;
+  /* Adds padding to prevent content from touching edges */
+  padding: 1rem;
+  /* Replaces Tailwind's flex flex-col items-center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for header, main, and sections */
+.container {
+  /* Replaces Tailwind's w-full max-w-4xl */
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Header styles */
+.header {
+  /* Replaces Tailwind's py-8 text-center */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  /* Smooth transition for potential animations */
+  transition: all 0.3s ease;
+}
+
+.header-title {
+  /* Replaces Tailwind's text-4xl font-bold text-yellow-400 */
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #facc15; /* Tailwind's yellow-400 */
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  /* Replaces Tailwind's mt-2 text-gray-300 */
+  margin-top: 0.5rem;
+  color: #d1d5db; /* Tailwind's gray-300 */
+  font-size: 1rem;
+}
+
+/* Main content area */
+.main {
+  /* Replaces Tailwind's px-4 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Section titles */
+.section-title {
+  /* Replaces Tailwind's text-2xl font-semibold text-yellow-400 mb-6 */
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  color: #facc15; /* yellow-400 */
+  margin-bottom: 1.5rem;
+  /* Adds letter spacing for readability */
+  letter-spacing: 0.05em;
+  /* Subtle text shadow for depth */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid layout for movie cards */
+.grid {
+  /* Replaces Tailwind's grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Section margin */
+.section-margin {
+  /* Replaces Tailwind's my-12 */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Styles for movie card containers */
+.movie-card {
+  position: relative;
+  /* Smooth transition for hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  /* Subtle gradient background */
+  background: linear-gradient(180deg, #2d3748, #1a202c);
+  /* Minimum width for layout */
+  min-width: 150px;
+  /* Slight border for definition */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Replaces Tailwind's rounded-lg overflow-hidden */
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Hover effects for movie cards */
+.movie-card:hover {
+  /* Lifts card for 3D effect */
+  transform: translateY(-8px);
+  /* Stronger shadow on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  /* Lightens background on hover */
+  background: linear-gradient(180deg, #374151, #1f2937);
+}
+
+/* Movie card images */
+.movie-card img {
+  /* Replaces Tailwind's w-full h-64 object-cover */
+  width: 100%;
+  height: 16rem; /* 256px */
+  object-fit: cover;
+  /* Subtle opacity transition on hover */
+
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect for movie card images */
+.movie-card:hover img {
+  /* Reduces opacity on hover */
+  opacity: 0.9;
+}
+
+/* Movie card content */
+.movie-card div {
+  /* Replaces Tailwind's p-4 */
+  background: #000000;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.668) 50%,
+    rgba(0, 0, 0, 0.241) 100%
+  );
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.movie-card h3 {
+  /* Replaces Tailwind's text-lg font-semibold text-white */
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: white;
+}
+
+.movie-card p {
+  /* Replaces Tailwind's text-gray-400 */
+  color: #9ca3af; /* gray-400 */
+  font-size: 1rem;
+}
+
+.movie-card p.text-yellow {
+  /* Replaces Tailwind's text-yellow-400 font-semibold */
+  color: #facc15; /* yellow-400 */
+  font-weight: 600;
+}
+
+.movie-card p.text-gray-300 {
+  /* Replaces Tailwind's text-gray-300 */
+  font-size: 30px;
+  font-weight: 800;
+  color: #f6e609ad; /* gray-300 */
+  text-align: center;
+}
+
+.text-gray-400 {
+  color: red;
+}
+
+/* Footer styles */
+.footer {
+  /* Replaces Tailwind's w-full py-6 text-center text-gray-400 mt-12 */
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  color: #9ca3af; /* gray-400 */
+  margin-top: 3rem;
+  /* Thin border for separation */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Placeholder text for empty lists */
+.grid p {
+  /* Replaces Tailwind's text-gray-400 */
+  color: #9ca3af; /* gray-400 */
+  font-size: 1rem;
+}
+
+/* Responsive grid adjustments */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  body {
+    /* Reduces padding on small screens */
+    padding: 0.5rem;
+  }
+  .movie-card {
+    /* Reduces minimum width for mobile */
+    min-width: 150px;
+  }
+  .header {
+    /* Adjusts padding for mobile */
+    padding-top: 1.5rem;
+  }
+}
